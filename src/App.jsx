@@ -8,6 +8,7 @@ import CreateOrder, {
   action as createOrderAction,
 } from "./features/order/CreateOrder";
 import Order, { loader as orderLoader } from "./features/order/Order";
+import { action as updatePriorityAction } from "./features/order/UpdatePriority";
 import AppLayout from "./ui/AppLayout";
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           element: <Order />,
           loader: orderLoader,
           errorElement: <Error />,
+          action: updatePriorityAction,
         },
       ],
     },
